@@ -31,11 +31,29 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECRET_KEY = 'django-insecure-)irk9amh*cqkro+p^p^0nb=+a2dh3ogsolib-04*t%saamzg5a'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['restaurant-epicurean-a32b57262b21.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['localhost','restaurant-epicurean-a32b57262b21.herokuapp.com']
+
+# LOGGING = {
+#    'version': 1,
+#    'disable_existing_loggers': False,
+#    'handlers': {
+#       'file': {
+#          'level': 'DEBUG',
+#          'class': 'logging.FileHandler',
+#          'filename': 'debug.log',
+#       },
+#    },
+#    'loggers': {
+#       'django': {
+#          'handlers': ['file'],
+#          'level': 'DEBUG',
+#          'propagate': True,
+#       },
+#    },
+# }
 
 
 # Application definition
