@@ -90,9 +90,7 @@ Epicure Junction is a Fictional restaurant. The main goal of the website is to a
 
 ### Design
 
-I decided that I wanted this website to be modern, minimalistic in it's appearance. I used a template
-from https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme but I changed most code to satisfy my requirements.
-
+I decided that I wanted this website to be modern, minimalistic in it's appearance. 
 
 ### Site User
 
@@ -161,167 +159,66 @@ The following User stories were not completed as they were deemed to be not nece
 
 #### User based Features Implemented:
 
- - **Users can** create an account (**Create**)
+ - **Users can** navigate the restaurant website
+ - **Users can** create an account
  - **Users can** log into their account
  - **Users can** log out of their account
- - **Users can** make a booking through the reservation form **(Create)**
- - **Users can** access their profile page & view their information and/or bookings **(Read)**
- - **Users can** add their name, contact number and e-mail to their profile (**Create**)
- - **Users can** view their bookings from their profile page (**Read**)
- - **Users can** edit their username or any other information they have on their profile (**Update**)
- - **Users can** add their image or update an image if it is already set on their profile(**Update**)
- - **Users can** edit their booking if it has not yet been accepted or declined (**Update**)
- - **Users can** delete bookings at any stage of the process from their profile page (**Delete**)
- - **Users can** delete their account from the profile page by clicking on delete account (**Delete**)
+ - **Users can** make a booking through the reservation form 
 
 #### Account restrictions:
- - **Users cannot** access the profile section of an account without being logged in
+
  - **Users cannot** access the reservation form until they sign up or login
- - **Users cannot** edit a reservation once it has been accepted or declined
- - **Users cannot** edit their account number as this is their UserID and a primary key
- - **Users cannot** see other users bookings
  - **Users cannot** access the admin panel of the website unless they have admin status
 
 #### Website features:
 
-##### Dynamic Menu listings
-
- - The website displays dynamic menus that are updated on the back end and shown on the front-end depending on which menu the user selects.
- - If the menu is updated by the business owner then this change will reflect on the front end.
- - Additionally if the site owner wants to add extra items to the menus they will also display for customers.
- - This allows the business owner to make easy changes, change pricing, dishes, or even descriptions easily.
-
-##### Events
-
- - The site has an events link that highlights upcoming events being held at the venue.
- - It shows users a list and if they select an event they are brought on to a page to show them the details of that event.
- - The site owner can make changes to existing events, or add new ones as they come up to display on the front end for users.
-
-##### Booking System
-
- - Once a user has created an account they can make reservation requests with the business.
- - The site user only has to check the bookings field at the start of each day and decide if they have space to accommodate the bookings. 
- - If they have space they can accept the booking and this will display in the customer / users profile.
- - If they do not have space the site owner can decline the booking and the user / customer would be notified that the reservation has been declined.
 
 
-
-### index.html
+### Main website
 
 #### Desktop
 
 > Desktop Navigation
 
-![Desktop Navigation](static/images/readme_images/desktopnavigation.png)
+![Main page](readme/hero.png)
 
- - The desktop navigation consists of a Home, Reservations and Events link. 
- - If the user is logged in they have access to profiles through the profile icon.
- - If the user is a superuser they will then also have access to the django admin panel through the link beside logout. 
-
----
-
-> Venue Cards
-
-![Venue Cards](static/images/readme_images/venuecards.png)
-
-- The venu cards are just a quick was to display the different features of the Business. 
-- They are a card deck that will be repeated below to convey structure of the site.
-- The 3 cards are for Restaurant, Bar, Venue. Think of the devils pitchfork as a trident and that's what you have with this business.
+ - The desktop navigation consists of a Home, About, Menu and Contact. 
+ - A user can sign up, log in or book a table from this website.
+ - If a user isn't logged in, and presses book a table, the login page will pop up
 
 ---
 
-> Menu collapsed
+> About page
 
-![Menu Collapsed](static/images/readme_images/menuscollapsed.png)
+![About page](readme/about.png)
 
-- The menu section consists of 3 menus. A la carte, Set menu and Theatre Menu.
-- If a customer picks either Theatre or Set menu they will be shown only the selected menu.
-- If the customer selects the A la carte menu they will see all menu items.
 
 ---
 
-> Menu Expanded
+> Menu page
 
-![Menu Expanded](static/images/readme_images/menuexpanded.png)
+![Menu page](readme/menu.png)
 
-- The menu items are ordered by Starter, Main course, Dessert as you would expect to see on a restaurant menu
-- The design was made to actually make it feel like the user was holding the menu in their hands.
-- I set up the django templating so that if the business owner decides to add a dish to a menu then it will automatically display for them.
-- They can delete or update pricing on the backend and it will update straight away on the front end.
 
 ---
 
-> Upcoming Events
+> Book a table pabe
 
-![Upcoming Events](static/images/readme_images/upcomingeventscards.png)
+![Book a table](readme/form.png)
 
-- Upcoming events is a way for the business to show themed nights / gigs or holiday events.
-- In the future customers will be able to book tickets directly through the events page.
+- The form can be used to book a table or tables by a user
+- A user can book multiple tables if the number of user don't fit in one table
+- A user can only book a table from 11am till 11pm
+- One booking is for one hour
+- A user can send an optional message
+
+---
+
+> Contact
+
+![Contact](readme/contact.png)
+
   
----
-
-> Restaurant Booking Details
-
-![Restaurant booking details](static/images/readme_images/bookingnotice.png)
-
-- I decided that I wanted to have almost a restaurant booking terms so that on the reservation page it is just the form.
-
----
-
-> Footer
-
-![Footer](static/images/readme_images/footer.png)
-
-- The footer was designed to provide information and also functionality to the website.
-- It includes base navigation but also provides contact information & opening times.
-
----
-
-> Reservation form
-
-![Reservation form](static/images/readme_images/bookingform.png)
-
-- The reservation form contains the fields needed for a typical restaurant booking
-- It is displayed over a nice paralax image.
-
----
-
-> Mobile Navigation
-
-![Mobile Navigation](static/images/readme_images/mobilenavigation.png)
-
-- I used bootstrap to ensure my site was rendered at the best quality possible on mobile devices.
-
----
-
-> User profile
-
-![User Profile](static/images/readme_images/userprofileinfo.png)
-
-- The user profile section displays the image for the user along with the personal details.
-- The user can amend all personal informayion except account number. This is actually the userID primary key. 
-- I have added 100 to the userID and keep it as an account number if a user needed to query their account.
-
----
-
-> User bookings section
-
-![User Bookings](static/images/readme_images/profilebookingssection.png)
-
-- The user booking section will show all bookings that have not been deleted.
-- I incorporated a traffic light system for the status that changes depending on the outcome.
-- When a customer submits a request the booking is in **awaiting confirmation** status.
-- The business owner then views the bookings and information on the backend. 
-- If they can accomodate the customer they move the status to confirmed, if they do not they move the booking to declined.
-- This information is then relayed to the customer through the bookings in their profile.
-
----
-
-> User profile on mobile
-
-![User Mobile](static/images/readme_images/mobileuserprofile.png)
-
-- User profile on mobile stacks in a column on mobile.
 
 [Back to Top of page](#contents)
 
@@ -331,16 +228,10 @@ The following User stories were not completed as they were deemed to be not nece
 ## Features left to Implement 
 
 
- - Add ability for customers to purchase / book tickets for events on their account get a copy by email and to the profile booking section of their account.
- - Add e-mail notification for any changes to bookings made through the site. For example when a booking request has gone from pending to approved the user gets an email notification to advise them of this change.
- - Allow users to comment on events or share on social directly.
- - Allow users to sign up with social media
- - Add a specials section to the menu for the business to highlight the current specials easily.
- - Originally I had the user image replace the profile icon on the navbar and would like to change that back in the next iteration. 
- - Add a contact form with auto e-mail responses from the site.
- - Incorporate a QR code generator for the events that once a ticket is issued a corresponding QR code is sent in an e-mail with the details of the booking. This would allow the business to scan the QR code to validate the ticket.
- - Add an online ordering platform for users to want to order takeaway. Menu with a shopping cart and payment checkout.
- - I originally planned to add a Boolean field for newsletter to the customer model but due to time constraints I decided against this at this time. In the future I would add this in to get consent from customers to build a mailing list for the business.
+ - Add ability for customers to view and cancel their bookings
+ - Add ability for a restaurant owner to see all the bookings
+ - Add ability for a restaurant owner to cancel bookings
+ - Send an email to a customer with their reservations
 
 [Back to Top of page](#contents)
 
@@ -349,50 +240,37 @@ The following User stories were not completed as they were deemed to be not nece
 <a name="tech"></a>
 ##  Technology Used
 
-### Html
+- Html
 
- - Used to structure my webpages and the base templating language
+- CSS
 
-### CSS
+- JavaScript
 
- - Custom CSS was written on large chunks of this site to make it as close to the wireframes as I felt it needed to be.
+- Python
 
-### JavaScript
+- Django
 
- -  Used to add timeout function for messages as well as to enable the menu on index.html
+- Font Awesome
 
-### Python
+- Bootstrap 5
 
- -  Used for the logic in this project.
+- Jinja 
 
-### Django
+- GitHub
 
- -  Framework used to build this project. Provides a ready installed admin panel and includes many helper template tags that make writing code quick and efficient.
+- Heroku
 
-### Font Awesome
+- Elephant PostgreSQL
 
- -  Icon library used for the profile and admin panel section.
+- Cloudinary
 
-### Bootstrap 5
- - Used as the base front end framework to work alongside Django
+- Git
 
-### Jinja Templating with Django
- - Used to render logic within html documents and make the website more dynamic.
+- JQuery Timepicker
 
-### GitHub
- - Used to store the code for this project & for the projects Kanban board used to complete it.
+- Google Fonts
 
-### Heroku
-- Used to host and deploy this project
-
-### Heroku PostgreSQL
--Heroku PostgreSQL was used as the database for this project during development and in production.
-
-### Cloudinary
-- Used to host the static files for this project including user profile images.
-
-### Git
-- Used for version control throughout the project and to ensure a good clean record of work done was maintained.
+- Isotope JS library
 
 [Back to Top of page](#contents)
 
@@ -404,19 +282,11 @@ The following User stories were not completed as they were deemed to be not nece
 
 ### Testing Phase
 
-#### Manual Testing
-
-> Each user story was manually tested in line with intended functionality on both desktop & mobile.
-> As this project was driven by my own User Stories I  felt manual testing was applicable on all logic code.
-
-
->If the intended outcome completes then this will be flagged as pass. If it does not then this is a fail.
-
 
 #### Account Registration Tests
 | Test |Result  |
 |--|--|
-| User can create account | Pass |
+| User can sign up | Pass |
 | User can log into account| Pass|
 |User can log out of account|Pass|
 
@@ -428,9 +298,7 @@ The following User stories were not completed as they were deemed to be not nece
 |--|--|
 |User can navigate to Reservations | Pass |
 |User can access menu items| Pass|
-|User access account profile page|Pass|
-|User can access events items|Pass|
-|SuperUser can access admin panel|Pass|
+
 
 ---
 
@@ -439,8 +307,7 @@ The following User stories were not completed as they were deemed to be not nece
 | Test |Result  |
 |--|--|
 |Non logged in user cannot make reservation | Pass |
-|Non logged in user cannot access profile page| Pass|
-|Non superuser cannot access admin panel|Pass|
+
 
 ---
 
@@ -449,51 +316,9 @@ The following User stories were not completed as they were deemed to be not nece
 | Test |Result  |
 |--|--|
 |User can make a booking when all fields complete | Pass |
-|User tries to submit booking with empty form |Fail|
-|User tries to submit form without email address| Fail|
-|User can view their made bookings from profile|Pass|
-|User can edit booking while status is awaiting confirmation |Pass|
-|User can cancel booking while status is awaiting confirmation|Pass|
-|Edit button does not present on confirmed bookings|Pass|
-|Edit button does not present on declined bookings |Pass|
-|User can delete a pending booking|Pass|
-|User can delete a confirmed booking|Pass|
-|User can delete a declined booking|Pass|
+|User tries to submit booking with empty fields |Fail|
+|User tries to submit over book |Fail|
 
---- 
-
-#### Profile Tests
-
-| Test |Result  |
-|--|--|
-|User can edit their user name from the profile page | Pass |
-|User can edit / add a profile image from the profile page |Pass|
-|User can edit / add a phone number to their account| Pass|
-|User can edit their first and last name |Pass|
-|User cannot edit their account number |Pass|
-|User can add / edit their email address|Pass|
-|User cannot change username to the same as another user|Pass|
-|User cannot change their email to the same as another user |Pass|
-|User presented with pop up modal when they click delete|Pass|
-|User presented with correct start date on profile|Pass|
-|User can delete a declined booking|Pass|
-|User can delete account |Pass|
-
-
-#### Admin Tests
-
-| Test |Result  |
-|--|--|
-|Admin can add items to starters|Pass|
-|Admin can add items to mains|Pass|
-|Admin can add items to desserts|Pass|
-|Admin can edit items in starters|Pass|
-|Admin can edit items in mains|Pass|
-|Admin can edit items in desserts|Pass|
-|Admin can delete items in starters|Pass|
-|Admin can delete items in mains|Pass|
-|Admin can delete items in desserts|Pass|
-|Items they display correctly on front-end when updated / added|Pass|
 
 ---
 
@@ -501,16 +326,11 @@ The following User stories were not completed as they were deemed to be not nece
 
 ### Desktop
 
-> index.html
 
+![Google Lighthouse](readme/lighthouse.png)
 
-![Google Lighthouse Index](static/images/readme_images/lighthouseIndex.png)
-
-> profile.html
-
-
-![Google Lighthouse Profile](static/images/readme_images/lighthouseProfiles.png)
-
+- When the database is deployed on Elephant SQL performance is poor
+- When the database is local the performance is very good.
 
 ## HTML W3 Validation
 
